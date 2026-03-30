@@ -1,8 +1,12 @@
 // 应用配置文件
-export const API_BASE_URL = 'http://localhost:3001'
+export const API_BASE_URL = 'http://localhost:8080'
 export const API_ENDPOINTS = {
-    ANALYZE: `${API_BASE_URL}/api/analyze`,
-    HEALTH: `${API_BASE_URL}/api/health`,
+    // 动态分析接口
+    DYNAMIC_ANALYZE: `${API_BASE_URL}/api/dynamic/analyze`,
+    DYNAMIC_ANALYZE_WITH_MAPPING: `${API_BASE_URL}/api/dynamic/analyze-with-mapping`,
+    DYNAMIC_TEMPLATES: `${API_BASE_URL}/api/dynamic/templates`,
+    DYNAMIC_TEMPLATE_DETAIL: (templateId: string) => `${API_BASE_URL}/api/dynamic/templates/${templateId}`,
+    DYNAMIC_HEALTH: `${API_BASE_URL}/api/dynamic/health`,
 }
 
 // 文件上传配置
